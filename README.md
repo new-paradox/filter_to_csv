@@ -12,6 +12,7 @@ Use:
 Result to terminal:
 
 Invalid format: it is not name! in example_data/data32.csv line 6
+
 Invalid format: it is not email! in example_data/data32.csv line 8
 
 Result to file:
@@ -19,5 +20,7 @@ Result to file:
 ~/filter_to_csv/err_data_csv.log
 
 too many values to unpack (expected 3) type <class 'ValueError'> 
+
 it is not name! type <class 'ErrDecorator.NotNameError'> 
+
 it is not email! type <class 'ErrDecorator.NotEmailError'> 
