@@ -1,9 +1,8 @@
 # filter_to_csv python 3.8.2
 simple script
 to demonstrate skills in working in the OOP style,
-using a decorator, generator and working with files
-
-serves for filtering incorrect data from the .csv file
+using a decorator, generator and working with files.
+Serves for filtering incorrect data from the .csv file
 and writing to bad logs format .log
 
 Use:
