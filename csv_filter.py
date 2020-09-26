@@ -33,16 +33,19 @@ class FilterCSV:
         self.src = os.path.normpath(src)
 
     def csv_reader(self):
-        for files in FileManager(src=self.src).get_files():
-            with open(files, "r") as f_obj:
-                reader = csv.reader(f_obj)
-                for index_row, row in enumerate(reader):
-                    if index_row == 0:
-                        continue
-                    try:
-                        self.check_line(row)
-                    except (NotNameError, NotEmailError, ValueError) as exc:
-                        print(f'Invalid format: {exc} in {files} line {index_row + 1}')
+        if os.path.exists(self.src):
+            for files in FileManager(src=self.src).get_files():
+                with open(files, "r") as f_obj:
+                    reader = csv.reader(f_obj)
+                    for index_row, row in enumerate(reader):
+                        if index_row == 0:
+                            continue
+                        try:
+                            self.check_line(row)
+                        except (NotNameError, NotEmailError, ValueError) as exc:
+                            print(f'Invalid format: {exc} in {files} line {index_row + 1}')
+        else:
+            raise FileNotFoundError('directory not found')
 
     @log_errors('err_data_csv.log')
     def check_line(self, line):
