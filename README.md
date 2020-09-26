@@ -1,9 +1,8 @@
 # filter_to_csv python 3.8.2
 simple script
 to demonstrate skills in working in the OOP style,
-using a decorator, generator and working with files
-
-serves for filtering incorrect data from the .csv file
+using a decorator, generator and working with files.
+Serves for filtering incorrect data from the .csv file
 and writing to bad logs format .log
 
 Use:
@@ -17,8 +16,9 @@ Result to file:
 ~/filter_to_csv/err_data_csv.log
 
 too many values to unpack (expected 3) type <class 'ValueError'> 
+
 it is not name! type <class 'ErrDecorator.NotNameError'> 
-it is not email! type <class 'ErrDecorator.NotEmailError'>
+it is not email! type <class 'ErrDecorator.NotEmailError'> 
 
 If no such directory exists:
 Result to terminal - Error: directory not found type <class 'FileNotFoundError'>
